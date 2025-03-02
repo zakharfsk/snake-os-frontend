@@ -9,7 +9,7 @@ function SystemResourcesLoad(props) {
         const timer = setInterval(() => {
             setcpuLoad(Math.floor(Math.random() * 101));
             setramLoad(Math.floor(Math.random() * 101));
-        }, 10000);
+        }, 3000);
 
         return () => clearInterval(timer);
     }, []);
@@ -23,6 +23,8 @@ function SystemResourcesLoad(props) {
                     {limit: 60, color: '#F58B19', showTick: true},
                     {limit: 100, color: '#EA4228', showTick: true},
                 ]
+            }} labels={{
+                valueLabel: {formatTextValue: (value) => `${value}% CPU`},
             }} value={cpuLoad}/>
             <GaugeComponent arc={{
                 subArcs: [
@@ -31,6 +33,8 @@ function SystemResourcesLoad(props) {
                     {limit: 60, color: '#F58B19', showTick: true},
                     {limit: 100, color: '#EA4228', showTick: true},
                 ]
+            }} labels={{
+                valueLabel: {formatTextValue: (value) => `${value}% RAM`},
             }} value={ramLoad}/>
         </div>
     );

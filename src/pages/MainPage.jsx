@@ -16,11 +16,8 @@ function MainPage(props) {
                     <div className="flex flex-1 flex-col items-center gap-4">
                         <DateTime/>
                         <SystemStatus/>
-                        <SystemStatus/>
                     </div>
-                    <div className="flex flex-1 flex-col items-center gap-4">
-
-                    </div>
+                    <div className="flex flex-1 flex-col items-center gap-4"></div>
                 </main>
             </div>
         );

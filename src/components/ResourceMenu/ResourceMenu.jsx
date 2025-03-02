@@ -40,7 +40,6 @@ const ResourceMenu = () => {
                     RAM
                 </button>
             </div>
-
             {/* Content */}
             <div>
                 {activeTab === "CPU" && (
